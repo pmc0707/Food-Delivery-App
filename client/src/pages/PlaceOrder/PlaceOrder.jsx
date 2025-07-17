@@ -47,7 +47,7 @@ const PlaceOrder = () => {
             amount: getTotalCartAmount() + deliveryCharge,
         }
         if (payment === "stripe") {
-            let response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
+            let response = await axios.post(url + "api/order/place", orderData, { headers: { token } });
             if (response.data.success) {
                 const { session_url } = response.data;
                 window.location.replace(session_url);
@@ -57,7 +57,7 @@ const PlaceOrder = () => {
             }
         }
         else{
-            let response = await axios.post(url + "/api/order/placecod", orderData, { headers: { token } });
+            let response = await axios.post(url + "api/order/placecod", orderData, { headers: { token } });
             if (response.data.success) {
                 navigate("/myorders")
                 toast.success(response.data.message)

@@ -9,7 +9,7 @@ const List = () => {
   const [list, setList] = useState([]);
 
   const fetchList = async () => {
-    const response = await axios.get(`${url}/api/food/list`)
+    const response = await axios.get(`${url}api/food/list`)
     if (response.data.success) {
       setList(response.data.data);
     }
@@ -19,7 +19,7 @@ const List = () => {
   }
 
   const removeFood = async (foodId) => {
-    const response = await axios.post(`${url}/api/food/remove`, {
+    const response = await axios.post(`${url}api/food/remove`, {
       id: foodId
     })
     await fetchList();
@@ -49,7 +49,7 @@ const List = () => {
         {list.map((item, index) => {
           return (
             <div key={index} className='list-table-format'>
-              <img src={`${url}/images/` + item.image} alt="" />
+              <img src={`${url}images/` + item.image} alt="" />
               <p>{item.name}</p>
               <p>{item.category}</p>
               <p>{currency}{item.price}</p>
