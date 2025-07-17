@@ -32,6 +32,7 @@ Users can browse restaurants, explore menus, place orders, apply coupons, and tr
 | Render/Vercel   | Deployment                          |
 
 ---
-
+CLIENT DASHBOARD -https://foodyvlog.vercel.app/
+ADMIN DASHBOARD -https://foodyadmin.vercel.app/
 
 
